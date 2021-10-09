@@ -26,5 +26,5 @@ for element in output_lst:
     allnum.write(element2.group() + "\n")
     powerfile.write(element2.group(3) + "\n")
 
-    for elementfive in element:        
-        fivefile.write(element2.group(2) + "\n")
+    for elementfive in element.group(2):        
+        fivefile.write(elementfive + "\n")
