@@ -22,7 +22,7 @@ for tr in browser.find_elements_by_xpath('/html/body/main/section/div/div/table/
 output_lst = [tr.text for tr in tds] 
 
 for element in output_lst:
-    element2 = re.search("((\d*-)(\d*-)(\d*-)(\d*-)(\d*-)(\d*))",element) 
+    element2 = re.search("((\d*)-(\d*)-(\d*)-(\d*)-(\d*)-(\d*))",element) 
     allnum.write(element2.group() + "\n")
     powerfile.write(element2.group(3) + "\n")
     #fivefile.write(element2.groups(2) + "\n")
