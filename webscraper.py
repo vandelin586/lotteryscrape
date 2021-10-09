@@ -25,4 +25,6 @@ for element in output_lst:
     element2 = re.search("((\d*-\d*-\d*-\d*-\d*)-(\d*))",element) 
     allnum.write(element2.group() + "\n")
     powerfile.write(element2.group(3) + "\n")
-    fivefile.write(element2.group(2) + "\n")
+
+    for elementfive in element:        
+        fivefile.write(elementfive.group(2) + "\n")
