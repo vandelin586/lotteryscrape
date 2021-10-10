@@ -13,13 +13,13 @@ textfile = open("lotterylist.txt", "a")
 fivefile = open("fivelist.txt", "a")
 powerfile = open("powerlist.txt", "a")
 allnum = open("allnums.txt", "a")
-url = 'https://lottery.com/previous-results/mi/megamillions/2016/'
+url = ['https://lottery.com/previous-results/mi/megamillions/2021/','https://lottery.com/previous-results/mi/megamillions/2020/']
 
     
 
-#for echurl in url:
-browser = webdriver.Chrome()
-browser.get(url)
+for echurl in url:
+    browser = webdriver.Chrome()
+browser.get(echurl)
 for tr in browser.find_elements_by_xpath('/html/body/main/section/div/div/table/tbody') :
     tds = tr.find_elements_by_tag_name('tr')
 output_lst = [tr.text for tr in tds]
