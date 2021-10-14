@@ -9,24 +9,25 @@ from typing import Type
 from selenium import webdriver
 
 output_lst = []
-textfile = open("lotterylist.txt", "a")
 fivefile = open("fivelist.txt", "a")
 powerfile = open("powerlist.txt", "a")
+url = 'https://lottery.com/previous-results/mi/megamillions/2021/','https://lottery.com/previous-results/mi/megamillions/2020/','https://lottery.com/previous-results/mi/megamillions/2019/','https://lottery.com/previous-results/mi/megamillions/2018/','https://lottery.com/previous-results/mi/megamillions/2017/'
 allnum = open("allnums.txt", "a")   
 
 def urlfunc (echurl):     
-    for x in echurl:       
+    for x in echurl:
+        print(x)      
         browser = webdriver.Chrome()
-    browser.get(x)
-    for tr in browser.find_elements_by_xpath('/html/body/main/section/div/div/table/tbody') :
-        tds = tr.find_elements_by_tag_name('tr')
-    output_lst = [tr.text for tr in tds]
+        browser.get(x)
+        for tr in browser.find_elements_by_xpath('/html/body/main/section/div/div/table/tbody') :
+            tds = tr.find_elements_by_tag_name('tr')
+            output_lst = [tr.text for tr in tds]
+            browser.quit
 
-for element in output_lst:
-    element2 = re.search("((\d*)-(\d*)-(\d*)-(\d*)-(\d*)-(\d*))",element) 
-    allnum.write(element2.group() + "\n")
-    powerfile.write(element2.group (7) + "\n")
-    fivefile.write(element2.group(2) + "\n" + element2.group(3) + "\n" + element2.group(4) + "\n" + element2.group(5) + "\n" + element2.group(6) + "\n")
-    url = ['https://lottery.com/previous-results/mi/megamillions/2021/','https://lottery.com/previous-results/mi/megamillions/2020/']
-
-    urlfunc(url)
+            for element in output_lst:
+                element2 = re.search("((\d*)-(\d*)-(\d*)-(\d*)-(\d*)-(\d*))",element) 
+                allnum.write(element2.group() + "\n")
+                powerfile.write(element2.group (7) + "\n")
+                fivefile.write(element2.group(2) + "\n" + element2.group(3) + "\n" + element2.group(4) + "\n" + element2.group(5) + "\n" + element2.group(6) + "\n")
+    
+urlfunc (url)
