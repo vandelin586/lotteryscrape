@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "..\\..\\Users\\vande\\Desktop\\pythoncrypto"
         }
     ]
 }
