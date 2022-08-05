@@ -13,7 +13,7 @@ output_lst = []
 allnum = open("allnums.txt", "a")
 whiteball = open("fivelist.txt", "a")
 megaball = open("powerlist.txt", "a")
-url = 'https://lottery.com/previous-results/mi/megamillions/2021/','https://lottery.com/previous-results/mi/megamillions/2020/','https://lottery.com/previous-results/mi/megamillions/2019/','https://lottery.com/previous-results/mi/megamillions/2018/','https://lottery.com/previous-results/mi/megamillions/2017/'
+url = 'https://www.lotteryusa.com/michigan/mega-millions/year'
 
 
 def urlfunc (echurl):     
