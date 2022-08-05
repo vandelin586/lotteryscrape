@@ -17,11 +17,12 @@ driver.get("https://www.lotteryusa.com/michigan/mega-millions/year")
  
 # get element
 #element = driver.find_element(By.XPATH, '//*[@id="main"]/div[3]/form/div[2]/div/div/div/table/tbody/tr[2]/th/time').text
-element = driver.find_element(By.XPATH, '/html/body/main/div[3]/form/div[2]/div/div/div/table/tbody/tr[5]/th').accessible_name
+element = driver.find_element(By.XPATH, '/html/body/main/div[3]/form/div[2]/div/div/div/table/tbody/tr[2]/th/time').text
 #element = driver.find_element(By.XPATH, '//*[@id="main"]/div[3]/form/div[2]/div/div/div/table/tbody/tr[]/th/time')
 #driver.find_element(By.XPATH, '//button[text()="Some text"]')
 # print complete element
-print(element)
+print(element.)
+element.
 
 #get this text //*[@id="main"]/div[3]/form/div[2]/div/div/div/table/tbody/tr[4]...
 #.../(By.xpath(".//*.getText();
