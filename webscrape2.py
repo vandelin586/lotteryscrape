@@ -21,7 +21,7 @@ def urlfunc (echurl):
         print(x)      
         browser = webdriver.Chrome()
         browser.get(x)
-        for tr in browser.find_elements("by.xpath",'/html/body/main/section/div/div/table/tbody'):
+        for tr in browser.find_elements("by.xpath"'/html/body/main/div[3]/form/div[2]/div/div/div/table/tbody/tr[*]/th'):
             tds = tr.driver.find_elements("by.tag_name",'tr')
             output_lst = [tr.text for tr in tds]
             browser.quit
